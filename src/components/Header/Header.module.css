@@ -1,10 +1,38 @@
+@font-face {
+    font-family: 'Minecrafita';
+    src: url("/src/fonts/Minecraftia-Regular.ttf");
+}
+
 .header{
-    width: 500px;
+    width: 1200px;
     height: 200px;
     margin: auto;
     padding-top: 50px;
-    /* animation: flickering 3s infinite; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.logo_wrapper{
+    position: relative;
+    top:0;
+    left: 0;
+}   
+
+.logo{
+    animation: typing .5s steps(8, end),
+               bliking .6s infinite;
+    border-right:#fff 1rem solid;
+}
+
+.profile{
+    color:#fff;
+}
+
+
+
+
+/* Animations */
 
 @keyframes flickering {
     0%{
@@ -16,3 +44,13 @@
     100%{opacity: 100%;}
 }
 
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes bliking {
+    from, to { border-color: transparent }
+     75% { border-color: #fff; }
+    
+}
