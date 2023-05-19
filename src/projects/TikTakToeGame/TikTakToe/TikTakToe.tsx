@@ -1,15 +1,10 @@
 import { FC } from "react";
-import { Box } from "@mui/material";
 import Board from "../Board/Board";
 
-import GameBoard from "../../../components/GameBoard/GameBoard";
+import GameBoard from "components/GameBoard/GameBoard";
 
 const Game = () => {
-  return (
-    <Box>
-      <Box sx={{ color: "#fff" }}>1</Box>
-    </Box>
-  );
+  return <Board />;
 };
 
 const TikTakToe: FC = () => {

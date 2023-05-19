@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -11,36 +11,43 @@ const Header: FC = () => {
     <Box className={style.header}>
       <Box className={style.logo_wrapper}>
         <Typography
-          sx={{
-            display: " inline-block",
-            fontFamily: "Minecraftia",
-            fontSize: "1.5rem",
-            color: "#fff",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textDecoration: "none",
-          }}
+          sx={logoStyles}
           className={style.logo}
           component={(props) => <Link to="/" {...props} />}
         >
           nursultan
         </Typography>
-        <Box
-          sx={{
-            position: "absolute",
-            width: "100%",
-            height: "1rem",
-            bottom: 0,
-            left: 0,
-            background: "#000",
-          }}
-        ></Box>
+        <Box sx={logoCoverStyle}></Box>
       </Box>
-
       <NavBar />
-      <Typography className={style.profile}>PROFILE</Typography>
+      <Typography sx={profileStyle}>profile</Typography>
     </Box>
   );
+};
+
+const logoStyles = {
+  display: " inline-block",
+  fontFamily: "Minecraftia",
+  fontSize: "1.5rem",
+  color: "#0f0",
+  whiteSpace: "nowrap",
+  overflow: "hidden",
+  textDecoration: "none",
+};
+
+const logoCoverStyle = {
+  position: "absolute",
+  width: "100%",
+  height: "1rem",
+  bottom: 0,
+  left: 0,
+  background: "#000",
+};
+
+const profileStyle = {
+  color: "#fff",
+  fontFamily: "Courier New",
+  fontSize: "1.3rem",
 };
 
 export default Header;

@@ -4,45 +4,32 @@
 }
 
 .header{
-    width: 1200px;
-    height: 200px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     margin: auto;
-    padding-top: 50px;
+    padding: 30px 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: inherit;
 }
 
 .logo_wrapper{
     position: relative;
-    top:0;
+    top:6px;
     left: 0;
 }   
 
 .logo{
     animation: typing .5s steps(8, end),
-               bliking .6s infinite;
-    border-right:#fff 1rem solid;
+               bliking 0.5s infinite;
+    border-right:#0f0 1rem solid;
 }
-
-.profile{
-    color:#fff;
-}
-
-
 
 
 /* Animations */
-
-@keyframes flickering {
-    0%{
-        opacity: 0%;
-    }
-    10%{opacity: 100%;}
-    20%{opacity: 0%;}
-    50%{opacity: 80%;}
-    100%{opacity: 100%;}
-}
 
 @keyframes typing {
     from { width: 0 }
@@ -51,6 +38,6 @@
 
 @keyframes bliking {
     from, to { border-color: transparent }
-     75% { border-color: #fff; }
+     75% { border-color: #0f0; }
     
 }
