@@ -13,14 +13,13 @@ const CircleIcon = () => {
           <circle
             cx="12"
             cy="12"
-            data-name="Circle"
             fill="none"
             id="Circle-2"
             r="10"
             stroke="#fff"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
           />
         </g>
       </g>

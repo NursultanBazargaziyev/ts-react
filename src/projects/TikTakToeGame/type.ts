@@ -4,7 +4,6 @@ export type PlayerType = {
 
 export type CellValueType = {
     cellValue: string;
-    onClick: (e:React.MouseEvent<HTMLDivElement>, key:number)=>void;
-    key: number;
+    onClick: ()=>void;
 }
 

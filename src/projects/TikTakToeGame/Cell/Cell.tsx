@@ -6,14 +6,9 @@ import { CellValueType } from "projects/TikTakToeGame/type";
 import CrossIcon from "components/assets/Icons/CrossIcon";
 import CircleIcon from "components/assets/Icons/CircleIcons";
 
-const Cell: FC<CellValueType> = ({ cellValue, onClick, key }) => {
+const Cell: FC<CellValueType> = ({ cellValue, onClick }) => {
   return (
-    <Box
-      onClick={(e) => {
-        onClick(e, key);
-      }}
-      sx={cellStyle}
-    >
+    <Box onClick={() => onClick()} sx={cellStyle}>
       {(cellValue === "X" && <CrossIcon />) ||
         (cellValue === "O" && <CircleIcon />)}
     </Box>

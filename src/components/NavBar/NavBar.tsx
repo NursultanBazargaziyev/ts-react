@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 
@@ -8,10 +8,10 @@ const NavBar: FC = () => {
   return (
     <Box className={style.navbar}>
       <Link className={style.navbar_item} to="/">
-        Main
+        main
       </Link>
       <Link className={style.navbar_item} to="projects">
-        My Projects
+        my projects
       </Link>
     </Box>
   );

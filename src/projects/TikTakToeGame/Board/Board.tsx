@@ -1,28 +1,42 @@
-import { FC, useState, useRef } from "react";
-import { Box } from "@mui/material";
+import { FC, useState } from "react";
+import { Box, Button } from "@mui/material";
 
 import Cell from "../Cell/Cell";
 
 import useGameChanges from "../Hooks/useGameChanges";
 
 const Board: FC = () => {
-  const [currentPlayer, setcurrentPlayer] = useState<string>("");
+  const [currentPlayer, setCurrentPlayer] = useState<string>("X");
   const [cells, setCells] = useState<string[]>([]);
 
-  const { handlePlayerSwitch, handlePlayerMove } = useGameChanges();
+  const { handlePlayerMove, handleCheckWin, handleResetGame } =
+    useGameChanges();
 
-  const linkref = useRef<HTMLDivElement[]>([]);
+  const handleGameReset = () => {
+    handleResetGame();
+    setCells([]);
+    setCurrentPlayer("X");
+  };
 
   return (
     <Box>
-      <Box sx={{ position: "absolute", top: "0%", right: "0%" }}>
-        {currentPlayer}
+      <Box sx={{ position: "absolute", top: "25%", right: "25%" }}>
+        <Button onClick={handleGameReset}>Reset the game</Button>
       </Box>
       <Box sx={boardStyles}>
         {[...Array(9)].map((_, i) => (
           <Cell
-            onClick={(e, i) => {
-              console.log(e.target, i);
+            onClick={() => {
+              if (!cells[i]) {
+                handlePlayerMove(
+                  i,
+                  cells,
+                  currentPlayer,
+                  setCurrentPlayer,
+                  setCells
+                );
+                console.log(handleCheckWin(i, currentPlayer));
+              }
             }}
             cellValue={cells[i]}
             key={i}

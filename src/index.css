@@ -46,3 +46,7 @@ table {
 a{
 	text-decoration: none;
 }
+@font-face {
+    font-family: 'GlassTTY VT220';
+    src: url("/src/fonts/Glass_TTY_VT220.ttf");
+}
