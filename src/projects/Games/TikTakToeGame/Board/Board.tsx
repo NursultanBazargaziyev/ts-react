@@ -20,8 +20,24 @@ const Board: FC = () => {
 
   return (
     <Box>
-      <Box sx={{ position: "absolute", top: "25%", right: "25%" }}>
-        <Button onClick={handleGameReset}>Reset the game</Button>
+      <Box
+        sx={{
+          position: "absolute",
+          top: "10%",
+          right: "transform(50%)",
+          width: "200px",
+        }}
+      >
+        <Button
+          sx={{
+            color: "#0f0",
+            fontSize: "1.5rem",
+            fontFamily: "GlassTTY VT220",
+          }}
+          onClick={handleGameReset}
+        >
+          Reset the game
+        </Button>
       </Box>
       <Box sx={boardStyles}>
         {[...Array(9)].map((_, i) => (
@@ -35,7 +51,19 @@ const Board: FC = () => {
                   setCurrentPlayer,
                   setCells
                 );
-                console.log(handleCheckWin(i, currentPlayer));
+                const winner = handleCheckWin(i, currentPlayer);
+                if (winner !== "") {
+                  if (winner === "Tie") {
+                    alert("That's a tie");
+                  }
+                  if (winner === "X") {
+                    alert("X is winner");
+                  }
+                  if (winner === "O") {
+                    alert("O is winner");
+                  }
+                  handleGameReset();
+                }
               }
             }}
             cellValue={cells[i]}
@@ -48,8 +76,8 @@ const Board: FC = () => {
 };
 
 const boardStyles = {
-  width: "570px",
-  height: "570px",
+  width: "500px",
+  height: "500px",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "space-evenly",

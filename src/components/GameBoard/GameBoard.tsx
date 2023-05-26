@@ -24,6 +24,9 @@ const GameBoard: FC<GameBoardType> = ({ gameComp }) => {
           position: "absolute",
           top: "10%",
           left: "10%",
+          color: "#0f0",
+          fontFamily: "GlassTTY VT220",
+          fontSize: "1.5rem",
         }}
         onClick={() => navigate(-1)}
       >

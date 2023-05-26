@@ -6,6 +6,9 @@ import CSSIcon from "components/assets/Icons/CSSIcon";
 import JavaIcon from "components/assets/Icons/JavaIcon";
 import ReactIcon from "components/assets/Icons/ReactIcon";
 
+import cube from "videos/cube.webm";
+import tictactoe from "videos/tictactoe.webm";
+
 const skillIconWidth = "6rem";
 const skillIconHeight = "6rem";
 
@@ -84,5 +87,26 @@ export const MY_SKILL_SET = [
   {
     component: <JavaIcon width={skillIconWidth} height={skillIconHeight} />,
     text: "Java icon",
+  },
+];
+
+export const MY_PROJECTS = [
+  {
+    picture: cube,
+    title: "3D Cube",
+    description: "Three.JS, JavaScript",
+    link: "/r/cube",
+  },
+  {
+    picture: tictactoe,
+    title: "Tic Tac Toe",
+    description: "JavaScript/TypeScript",
+    link: "/g/tiktaktoe",
+  },
+  {
+    picture: "",
+    title: "ASCII camera",
+    description: "JavaScript",
+    link: "/r/asciicamera",
   },
 ];

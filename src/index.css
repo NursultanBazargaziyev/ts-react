@@ -46,7 +46,14 @@ table {
 a{
 	text-decoration: none;
 }
+textarea {
+	resize: none;
+}
 @font-face {
     font-family: 'GlassTTY VT220';
     src: url("/src/fonts/Glass_TTY_VT220.ttf");
+}
+@font-face {
+    font-family: 'Minecrafita';
+    src: url("/src/fonts/Minecraftia-Regular.ttf");
 }

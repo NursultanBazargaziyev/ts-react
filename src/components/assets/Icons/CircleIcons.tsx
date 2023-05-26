@@ -1,8 +1,11 @@
-const CircleIcon = () => {
+import { FC } from "react";
+import { IconType } from "./type";
+
+const CircleIcon: FC<IconType> = ({ width, height }) => {
   return (
     <svg
-      width="4em"
-      height="4em"
+      height={height}
+      width={width}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -16,7 +19,7 @@ const CircleIcon = () => {
             fill="none"
             id="Circle-2"
             r="10"
-            stroke="#fff"
+            stroke="#0f0"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"

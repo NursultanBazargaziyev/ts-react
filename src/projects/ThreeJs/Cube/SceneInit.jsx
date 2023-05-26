@@ -50,7 +50,7 @@ export default class SceneInit {
   }
 
   animate() {
-    window.requestAnimationFrame(this.animate.bind(this));
+    this.animationId = window.requestAnimationFrame(this.animate.bind(this));
     this.render();
     this.controls.update();
   }

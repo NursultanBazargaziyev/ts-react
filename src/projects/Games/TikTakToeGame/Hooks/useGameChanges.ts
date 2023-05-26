@@ -45,16 +45,16 @@ const useGameChanges = () =>{
       };
 
 
-      const handleCheckWin = (index: number, currentPlayer:string) => {
+    const handleCheckWin = (index: number, currentPlayer:string) => {
         const col = Math.floor(index / 3);
         const row = index % 3;
     
         players[currentPlayer as ObjectKey].col[col]++;
         players[currentPlayer as ObjectKey].row[row]++;
-    
         if (col === row) {
           players[currentPlayer as ObjectKey].diag++;
-        } else if (col + row + 1 === 3) {
+        } 
+        if (col + row + 1 === 3) {
           players[currentPlayer as ObjectKey].counterDiag++;
         }
         if (players[currentPlayer as ObjectKey].col[col] === 3)

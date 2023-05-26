@@ -1,9 +1,12 @@
-const CrossIcon = () => {
+import { FC } from "react";
+import { IconType } from "./type";
+
+const CrossIcon: FC<IconType> = ({ width, height }) => {
   return (
     <svg
-      fill="#fff"
-      height="3em"
-      width="3em"
+      fill="#0f0"
+      height={height}
+      width={width}
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"

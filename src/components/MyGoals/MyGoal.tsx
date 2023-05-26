@@ -21,13 +21,12 @@ const MyGoal = () => {
         alignItems: "center",
         justifyContent: "center",
         flexWrap: "wrap",
-        borderTop: "2px #00ff00 solid",
+        borderTop: "1px #00ff00 solid",
       }}
     >
       <Box
         sx={{
           background: "rgba(0, 150, 0, 0.2)",
-          borderRadius: "0 0 20px 20px",
           padding: "10vh 3rem 3rem",
         }}
       >

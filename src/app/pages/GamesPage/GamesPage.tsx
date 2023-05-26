@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import TikTakToe from "projects/TikTakToeGame/TikTakToe/TikTakToe";
+import TikTakToe from "projects/Games/TikTakToeGame/TikTakToe/TikTakToe";
 
 const GamesPage = () => {
   return (

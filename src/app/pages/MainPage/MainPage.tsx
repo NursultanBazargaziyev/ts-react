@@ -12,7 +12,7 @@ const MainPage = () => {
       <AboutMe />
       <MySkills />
       <MyGoal />
-      {/* <ContactMe /> */}
+      <ContactMe />
       <Footer />
     </Box>
   );

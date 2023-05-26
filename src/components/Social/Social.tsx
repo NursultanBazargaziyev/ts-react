@@ -16,12 +16,15 @@ const Social = () => {
         }}
       >
         <ListItem>
-          <Link href="https://github.com/NursultanBazargaziyev">
+          <Link href="https://github.com/NursultanBazargaziyev" target="_blank">
             <GitHubIcon />
           </Link>
         </ListItem>
         <ListItem>
-          <Link href="linkedin.com/in/nursultan-bazargaziyev/">
+          <Link
+            href="https://linkedin.com/in/nursultan-bazargaziyev/"
+            target="_blank"
+          >
             <LinkedinIcon />
           </Link>
         </ListItem>

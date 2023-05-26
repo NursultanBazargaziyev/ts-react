@@ -18,21 +18,16 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
+  <BrowserRouter>
+    <ScrollToTop />
 
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<MainPage />} />
-          <Route path="projects" element={<MyProjectsPage />}>
-            <Route path="random" element={<RandomNav />} />
-            <Route path="gamesnav/*" element={<GamesNav />} />
-          </Route>
-        </Route>
-        <Route path="/r/*" element={<RandomPage />} />
-        <Route path="/g/*" element={<GamesPage />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<MainPage />} />
+        <Route path="projects" element={<MyProjectsPage />} />
+      </Route>
+      <Route path="/r/*" element={<RandomPage />} />
+      <Route path="/g/*" element={<GamesPage />} />
+    </Routes>
+  </BrowserRouter>
 );

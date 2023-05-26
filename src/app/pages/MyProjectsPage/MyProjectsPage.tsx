@@ -1,25 +1,35 @@
-import { Box, List, ListItem } from "@mui/material";
-import { Link, Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
+import { MY_PROJECTS } from "constants";
+
+import Project from "components/MyProjects/Project";
 
 const MyProjects = () => {
   return (
     <Box
       sx={{
-        height: "500px",
-        width: "1000px",
-        display: "flex",
-        justifyContent: "center",
-        margin: "200px auto",
+        height: "90vh",
+        width: "100%",
       }}
     >
-      <Box className="navigation">
-        <List>
-          <ListItem>
-            <Link to="random">Random</Link>
-            <Link to="gamesnav">Games</Link>
-          </ListItem>
-        </List>
-        <Outlet />
+      <Box
+        sx={{
+          margin: "0 auto",
+          width: "70%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+        }}
+      >
+        {MY_PROJECTS.map((item, i) => (
+          <Project
+            key={i}
+            picture={item.picture}
+            title={item.title}
+            description={item.description}
+            link={item.link}
+          />
+        ))}
       </Box>
     </Box>
   );
