@@ -46,7 +46,6 @@ const AboutMe = () => {
             >
               Bazargaziyev Nursultan. <br />
             </Box>
-            I'm student of University of Lodz, Poland.
           </Typography>
         </Box>
       </Box>

@@ -4,6 +4,7 @@
   "homepage": "https://gitname.github.io/react-gh-pages",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.0",
@@ -20,6 +21,7 @@
     "react-ga": "^3.3.1",
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
+    "three": "^0.152.2",
     "typescript": "^5.0.4",
     "web-vitals": "^2.1.4"
   },
@@ -48,5 +50,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babylonjs/core": "^6.5.0",
+    "@babylonjs/inspector": "^6.5.0"
   }
 }

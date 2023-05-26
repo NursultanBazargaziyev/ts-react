@@ -9,7 +9,7 @@
     },                                     
     "types": ["react/next", "react-dom/next"],                                      
     "allowJs": true,                                 
-    "checkJs": true,                                 
+    "checkJs": false,                                 
     "esModuleInterop": true,                            
     "forceConsistentCasingInFileNames": true,           
 
@@ -19,5 +19,5 @@
     "skipLibCheck": true,                                 
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src"]
+  "include": ["src", "decs.d.ts"]
 }

@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import NavBar from "../NavBar/NavBar";
+import Social from "components/Social/Social";
 
 import style from "./Header.module.css";
 
@@ -20,7 +21,7 @@ const Header: FC = () => {
         <Box sx={logoCoverStyle}></Box>
       </Box>
       <NavBar />
-      <Typography sx={profileStyle}>profile</Typography>
+      <Social />
     </Box>
   );
 };
