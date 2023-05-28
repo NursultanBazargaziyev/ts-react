@@ -9,8 +9,6 @@ import GamesPage from "./app/pages/GamesPage/GamesPage";
 import ScrollToTop from "./components/common/ScrollToTop/ScrollToTop";
 
 import MyProjectsPage from "app/pages/MyProjectsPage/MyProjectsPage";
-import GamesNav from "components/GamesNav/GamesNav";
-import RandomNav from "components/RandomNav/RandomNav";
 import RandomPage from "app/pages/RandomPage/RandomPage";
 
 const root = ReactDOM.createRoot(
