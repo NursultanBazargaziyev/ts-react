@@ -20,12 +20,15 @@ root.render(
     <ScrollToTop />
 
     <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<MainPage />} />
-        <Route path="projects" element={<MyProjectsPage />} />
+      <Route path="/">
+        <Route path="/" element={<App />}>
+          <Route index element={<MainPage />} />
+          <Route path="projects" element={<MyProjectsPage />} />
+        </Route>
+
+        <Route path="r/*" element={<RandomPage />} />
+        <Route path="g/*" element={<GamesPage />} />
       </Route>
-      <Route path="/r/*" element={<RandomPage />} />
-      <Route path="/g/*" element={<GamesPage />} />
     </Routes>
   </BrowserRouter>
 );
