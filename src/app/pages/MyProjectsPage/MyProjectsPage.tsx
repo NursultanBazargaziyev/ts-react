@@ -2,15 +2,17 @@ import { Box } from "@mui/material";
 import { MY_PROJECTS } from "constants";
 
 import Project from "components/MyProjects/Project";
+import Header from "components/Header/Header";
 
 const MyProjects = () => {
   return (
     <Box
       sx={{
-        minHeight: "90vh",
+        minHeight: "100vh",
         width: "100%",
       }}
     >
+      <Header />
       <Box
         sx={{
           margin: "0 auto",

@@ -5,7 +5,6 @@ import Header from "components/Header/Header";
 const App = () => {
   return (
     <Box sx={{ backgroundColor: "#000" }}>
-      <Header />
       <Outlet />
     </Box>
   );
