@@ -23,9 +23,9 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<MainPage />} />
         <Route path="projects" element={<MyProjectsPage />} />
-        <Route path="/r/*" element={<RandomPage />} />
-        <Route path="/g/*" element={<GamesPage />} />
       </Route>
+      <Route path="/r/*" element={<RandomPage />} />
+      <Route path="/g/*" element={<GamesPage />} />
     </Routes>
   </BrowserRouter>
 );
