@@ -8,6 +8,7 @@ import ReactIcon from "components/assets/Icons/ReactIcon";
 
 import cube from "videos/cube.webm";
 import tictactoe from "videos/tictactoe.webm";
+import ascii from "videos/ascii.webm";
 
 const skillIconWidth = "6rem";
 const skillIconHeight = "6rem";
@@ -104,7 +105,7 @@ export const MY_PROJECTS = [
     link: "/g/tiktaktoe",
   },
   {
-    picture: "",
+    picture: ascii,
     title: "ASCII camera",
     description: "JavaScript",
     link: "/r/asciicamera",

@@ -1,5 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
+import ascii from "videos/ascii.webm";
+
 const AboutMe = () => {
   return (
     <Box
@@ -14,22 +16,29 @@ const AboutMe = () => {
       }}
     >
       <Box
+        id="boxParent"
         sx={{
           width: "70vw",
           display: "flex",
+          justifyContent: "space-between",
           alignContent: "center",
           alignItems: "center",
         }}
       >
         {/* This box is for video */}
-        <Box
-          sx={{
-            background: "#0f0",
-            minWidth: "500px",
+        <canvas style={{ display: "none" }} id="boxCanvas" />
+        <video
+          id="videoBox"
+          style={{
+            // display: "none"
+            width: "500px",
             height: "500px",
-            marginRight: "50px",
           }}
-        ></Box>
+          autoPlay
+          muted
+          loop
+          src={ascii}
+        ></video>
         {/* This box is for description */}
         <Box sx={{}}>
           <Typography
