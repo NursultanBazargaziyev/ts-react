@@ -8,7 +8,7 @@ const MyProjects = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: "200vh",
         width: "100%",
       }}
     >

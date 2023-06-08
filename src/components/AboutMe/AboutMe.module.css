@@ -1,0 +1,84 @@
+.box_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.box_parent{
+    width: 70vw;
+    display: flex;
+    justify-Content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.video_about{
+    width: 500px;
+    height: 500px;
+}
+
+.intro_main{
+    display: block;
+    font-size: 2rem;
+    font-family: GlassTTY VT220;
+}
+
+.intro{
+    font-family: GlassTTY VT220;
+    color: #0f0;
+}
+
+@media screen and (max-width: 1200px) {
+    .video_about{
+        width: 350px;
+        height: 350px;
+    }
+    .intro{
+        font-size: 1.5rem;
+    }
+    .intro_main{
+        font-size: 1.5rem;
+    }
+    /* .box_wrapper{
+
+    } */
+}
+
+@media screen and (max-width: 900px) {
+    .video_about{
+        width: 275px;
+        height: 275px;
+    }
+    .intro{
+        font-size: 1.2rem;
+    }
+    .intro_main{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .video_about{
+        width: 200px;
+        height: 200px;
+    }
+    .box_parent{
+        flex-direction: column;
+    }
+
+    .intro{
+        font-size: 1rem;
+    }
+    .intro_main{
+        font-size: 1rem;
+    }
+    .box_wrapper{
+        height: auto;
+        margin-bottom: 20px;
+    }
+}

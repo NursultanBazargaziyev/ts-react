@@ -1,0 +1,97 @@
+.inputStyle{
+    background: rgba(0, 255, 0, 0.2);
+    width: auto;
+    border: none;
+    font-family: GlassTTY VT220;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    color: #e39d24;
+    margin:  0 5px 5px;
+    display: inline-block;
+    outline: none;
+  }
+
+
+   .console__text{
+    font-family: GlassTTY VT220;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #0f0;
+  }
+
+
+   .ide__string {
+    font-family: GlassTTY VT220;
+    white-space: pre-line;
+    font-size:  1.2rem;
+    color: #00ff00;
+  }
+
+  .ide__label {
+    font-family: GlassTTY VT220;
+    white-space: pre-line;
+    font-size:  1.2rem;
+    color: #00ff00;
+    margin-right: 12px,
+  }
+
+  .ide__textarea{
+    background: rgba(0, 255, 0, 0.2);
+    width: 500px;
+    height: 100px;
+    border: none;
+    font-family: GlassTTY VT220;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    color: #e39d24;
+    margin:  0 16px 5px;
+    display: inline-block;
+    outline: none;
+  }
+
+  .ide__button{
+    margin-left: 72px;
+    border: none;
+    width: 200px;
+    background-color: rgba(0, 255, 0, 0.2);
+    font-family: GlassTTY VT220;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    color: #0f0;
+  }
+
+  .ide__button:hover{
+    background:rgba(0, 255, 0, 0.5);
+  }
+
+
+@media screen and (max-width:1200px) {
+    .ide__string{
+        font-size: 0.9rem
+    }
+}
+@media screen and (max-width:600px) {
+    .ide__string{
+        font-size: 0.5rem
+    }
+    .ide__label{
+        font-size: 0.5rem
+    }
+    .inputStyle{
+        font-size: 0.7rem;
+        color: #e39d24;
+        margin:  0 5px 5px;
+    }
+    .ide__textarea{
+        font-size: 0.7rem;
+        margin: 0 0 10px 10px;
+        width: 200px;
+    }
+    .ide__button{
+        margin-left: 30px;
+
+
+
+    }
+}

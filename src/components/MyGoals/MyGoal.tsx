@@ -1,16 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-const myGoalsString = `
-
-    
-		
-
-  Person nursutaln = new Person(myGoals, factsAboutMe);
-  
-
-	return 0;
-}`;
-
 const MyGoal = () => {
   return (
     <Box
@@ -27,7 +16,8 @@ const MyGoal = () => {
       <Box
         sx={{
           background: "rgba(0, 150, 0, 0.2)",
-          padding: "10vh 3rem 3rem",
+          padding: { xs: "1rem", lg: "10vh 3rem 3rem" },
+          color: "#00ff00",
         }}
       >
         <Typography sx={ide__text}>
@@ -47,16 +37,8 @@ const MyGoal = () => {
           <span style={{ color: "#00ffb3" }}> char* </span>
           <span style={{ color: "#e39d24" }}> argv[]</span>,) <br />
           <span style={{ color: "#00e1ff" }}>std</span>::
-          <span style={{ color: "#00ff00" }}>string myGoals</span> = <br />
-          <Typography
-            sx={{
-              fontFamily: "GlassTTY VT220",
-              whiteSpace: "pre-line",
-              letterSpacing: "0.1rem",
-              fontSize: "1.2rem",
-              color: "#ffa600",
-            }}
-          >
+          <span style={{ color: "#00ff00" }}>string MY_GOALS</span> = <br />
+          <Typography sx={ide__string}>
             {
               '"My passion is to learn more about Computer science in general. I like to learn about Operating Systems, Networking, Algorithms, Data structures,Math, Physics and 2D / 3D graphics.'
             }
@@ -67,15 +49,7 @@ const MyGoal = () => {
           <br />
           <span style={{ color: "#00e1ff" }}>std</span>::
           <span style={{ color: "#00ff00" }}>string factsAboutMe</span> = <br />
-          <Typography
-            sx={{
-              fontFamily: "GlassTTY VT220",
-              whiteSpace: "pre-line",
-              letterSpacing: "0.1rem",
-              fontSize: "1.2rem",
-              color: "#ffa600",
-            }}
-          >
+          <Typography sx={ide__string}>
             {`" I'm into astronomy and everything related to it"
               " I love video games. "
               " I like cyberpunk and retro styles"
@@ -85,7 +59,7 @@ const MyGoal = () => {
           <span style={{ color: "#00ffb3" }}> new</span>
           <span style={{ color: "#eeff31" }}> Person</span>(
           <span style={{ color: "#00ff00" }}>myGoals</span>,
-          <span style={{ color: "#00ff00" }}> factsAboutMe</span>
+          <span style={{ color: "#00ff00" }}> FACTS_ABOUT_ME</span>
           );
           <br />
           <br />
@@ -101,10 +75,15 @@ const ide__text = {
   width: "70%",
   fontFamily: "GlassTTY VT220",
   whiteSpace: "pre-line",
-  letterSpacing: "0.1rem",
   lineHeight: "1.5",
-  fontSize: "1.2rem",
-  color: "#0f0",
+  fontSize: { xs: "0.5rem", sm: "0.9rem", lg: "1.2rem" },
+};
+
+const ide__string = {
+  fontFamily: "GlassTTY VT220",
+  whiteSpace: "pre-line",
+  fontSize: { xs: "0.5rem", sm: "0.9rem", lg: "1.2rem" },
+  color: "#ffa600",
 };
 
 export default MyGoal;

@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+
+import style from "./ContactMe.module.css";
 
 export const ContactMe = () => {
   const form = useRef();
@@ -21,7 +23,7 @@ export const ContactMe = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Message sent");
           setName("");
           setEmail("");
           setText("");
@@ -54,37 +56,20 @@ export const ContactMe = () => {
           ref={form}
           onSubmit={sendEmail}
         >
-          <p
-            style={{
-              fontFamily: "GlassTTY VT220",
-              letterSpacing: "0.1rem",
-              display: "inline-block",
-              fontSize: "1.2rem",
-              color: "#0f0",
-              marginBottom: "11px",
-            }}
-          >
+          <Typography sx={ide__string}>
             [ root@guest contact me ]# ./email.sh{" "}
-          </p>
+          </Typography>
           <Box
             sx={{
               display: "flex",
             }}
           >
-            <label
-              style={{
-                fontFamily: "GlassTTY VT220",
-                letterSpacing: "0.1rem",
-                display: "inline-block",
-                fontSize: "1.2rem",
-                color: "#0f0",
-                marginRight: "12px",
-              }}
-            >
+            <label className={style.ide__label}>
               name:
+              <span style={{ color: "transparent" }}>0</span>
             </label>
             <input
-              style={inputStyle}
+              className={style.inputStyle}
               value={name}
               onChange={(e) => setName(e.target.value)}
               type="text"
@@ -92,10 +77,10 @@ export const ContactMe = () => {
             />
           </Box>
           <Box>
-            <label style={console__text}>email:</label>
+            <label className={style.ide__label}>email:</label>
 
             <input
-              style={inputStyle}
+              className={style.inputStyle}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -105,22 +90,10 @@ export const ContactMe = () => {
             />
           </Box>
           <Box sx={{ display: "flex" }}>
-            <label style={console__text}>text: </label>
+            <label className={style.ide__label}>text: </label>
 
             <textarea
-              style={{
-                background: "rgba(0, 255, 0, 0.2)",
-                width: "500px",
-                height: "100px",
-                border: "none",
-                fontFamily: "GlassTTY VT220",
-                letterSpacing: "0.1rem",
-                fontSize: "1.2rem",
-                color: "#e39d24",
-                margin: " 0 16px 5px",
-                display: "inline-block",
-                outline: "none",
-              }}
+              className={style.ide__textarea}
               value={text}
               onChange={(e) => {
                 setText(e.target.value);
@@ -130,18 +103,7 @@ export const ContactMe = () => {
           </Box>
 
           <button
-            style={{
-              marginLeft: "72px",
-              border: "none",
-              width: "200px",
-              background: isHover
-                ? "rgba(0, 255, 0, 0.5)"
-                : "rgba(0, 255, 0, 0.2)",
-              fontFamily: "GlassTTY VT220",
-              letterSpacing: "0.1rem",
-              fontSize: "1.2rem",
-              color: "#0f0",
-            }}
+            className={style.ide__button}
             onMouseEnter={() => {
               setHover(true);
             }}
@@ -159,25 +121,32 @@ export const ContactMe = () => {
   );
 };
 
-const inputStyle = {
-  background: "rgba(0, 255, 0, 0.2)",
-  width: "auto",
-  border: "none",
-  fontFamily: "GlassTTY VT220",
-  letterSpacing: "0.1rem",
-  fontSize: "1.2rem",
-  color: "#e39d24",
-  margin: " 0 5px 5px",
-  display: "inline-block",
-  outline: "none",
-};
+// const inputStyle = {
+//   background: "rgba(0, 255, 0, 0.2)",
+//   width: "auto",
+//   border: "none",
+//   fontFamily: "GlassTTY VT220",
+//   letterSpacing: "0.1rem",
+//   fontSize: "1.2rem",
+//   color: "#e39d24",
+//   margin: " 0 5px 5px",
+//   display: "inline-block",
+//   outline: "none",
+// };
 
-const console__text = {
+// const console__text = {
+//   fontFamily: "GlassTTY VT220",
+//   letterSpacing: "0.1rem",
+//   display: "inline-block",
+//   fontSize: "1.2rem",
+//   color: "#0f0",
+// };
+
+const ide__string = {
   fontFamily: "GlassTTY VT220",
-  letterSpacing: "0.1rem",
-  display: "inline-block",
-  fontSize: "1.2rem",
-  color: "#0f0",
+  whiteSpace: "pre-line",
+  fontSize: { xs: "0.5rem", sm: "0.9rem", lg: "1.2rem" },
+  color: "#00ff00",
 };
 
 export default ContactMe;
