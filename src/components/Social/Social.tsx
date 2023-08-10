@@ -1,35 +1,51 @@
-import { List, Box, ListItem, Link } from "@mui/material";
+import { List, ListItem, Link, styled } from "@mui/material";
 
 import GitHubIcon from "components/assets/Icons/GitHubIcon";
 import LinkedinIcon from "components/assets/Icons/LinkedinIcon";
 
+const StyledList = styled(List)({
+  listStyle: "none",
+  width: "200px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  "@media (max-width: 900px)": {
+    width: "150px",
+  },
+});
+
+const SocialLinks = styled(Link)({
+  display: "inline-block",
+  textDecoration: "none",
+  color: "#fff",
+  width: "40px",
+  height: "40px",
+  "@media (max-width: 900px)": {
+    width: "20px",
+    height: "20px",
+  },
+});
+
 const Social = () => {
   return (
-    <Box>
-      <List
-        sx={{
-          listStyle: "none",
-          width: "200px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <ListItem>
-          <Link href="https://github.com/NursultanBazargaziyev" target="_blank">
-            <GitHubIcon />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <Link
-            href="https://linkedin.com/in/nursultan-bazargaziyev/"
-            target="_blank"
-          >
-            <LinkedinIcon />
-          </Link>
-        </ListItem>
-      </List>
-    </Box>
+    <StyledList>
+      <ListItem>
+        <SocialLinks
+          href="https://github.com/NursultanBazargaziyev"
+          target="_blank"
+        >
+          <GitHubIcon />
+        </SocialLinks>
+      </ListItem>
+      <ListItem>
+        <SocialLinks
+          href="https://linkedin.com/in/nursultan-bazargaziyev/"
+          target="_blank"
+        >
+          <LinkedinIcon />
+        </SocialLinks>
+      </ListItem>
+    </StyledList>
   );
 };
 

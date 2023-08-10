@@ -1,19 +1,37 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, styled } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
-import style from "./NavBar.module.css";
+const StyledLink = styled(RouterLink)(({ theme }) => ({
+  fontFamily: "GlassTTY VT220",
+  fontSize: "1.3rem",
+  display: "inline-block",
+  lineHeight: "1.5",
+  textDecoration: "none",
+  color: "#fff",
+
+  "@media (max-width: 900px)": {
+    fontSize: "0.8rem",
+  },
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-evenly",
+  alignItems: "center",
+  width: "400px",
+
+  "@media (max-width: 900px)": {
+    width: "200px",
+  },
+}));
 
 const NavBar: FC = () => {
   return (
-    <Box className={style.navbar}>
-      <Link className={style.navbar_item} to="/">
-        main
-      </Link>
-      <Link className={style.navbar_item} to="projects">
-        my projects
-      </Link>
-    </Box>
+    <StyledBox>
+      <StyledLink to="/">main</StyledLink>
+      <StyledLink to="projects">my projects</StyledLink>
+    </StyledBox>
   );
 };
 

@@ -8,11 +8,10 @@ const MyProjects = () => {
   return (
     <Box
       sx={{
-        minHeight: "200vh",
+        minHeight: "100vh",
         width: "100%",
       }}
     >
-      <Header />
       <Box
         sx={{
           margin: "0 auto",
